@@ -10,3 +10,8 @@ function getComputerChoice(){
         return 'scissor';
     }
 }
+
+function getHumanChoice(){
+    let choice=prompt("Enter choice").toLowerCase();
+    console.log(choice);
+}
