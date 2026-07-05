@@ -1,9 +1,9 @@
 function getComputerChoice(){
     let choice=Math.floor(Math.random() * 3);
-    if(choice()===0){
+    if(choice===0){
         return 'rock';
     }
-    else if(choice()===1){
+    else if(choice===1){
         return 'paper';
     }
     else{
@@ -59,7 +59,13 @@ function playRound(humanChoice,computerChoice){
     }
 }
 
+function playGame(playGame,humanScore,computerScore){
+    for(i=0;i<5;i++){
+        playRound();
+    }
+}
+
 const humanSelection=getHumanChoice();
 const computerSelection=getComputerChoice();
 
-playRound(humanSelection,computerSelection);
+playGame(humanSelection,computerSelection);
