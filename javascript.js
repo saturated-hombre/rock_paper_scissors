@@ -15,3 +15,7 @@ function getHumanChoice(){
     let choice=prompt("Enter choice").toLowerCase();
     console.log(choice);
 }
+
+let humanScore=0;
+let computerScore=0;
+
