@@ -12,8 +12,7 @@ function getComputerChoice(){
 }
 
 function getHumanChoice(){
-    let choice=prompt("Enter choice").toLowerCase();
-    console.log(choice);
+    return choice=prompt("Enter choice").toLowerCase();
 }
 
 let humanScore=0;
@@ -22,7 +21,7 @@ let computerScore=0;
 function playRound(humanChoice,computerChoice){
     //if humanChoice is equal to computerChoice then tie
     if (humanChoice===computerChoice){
-        console.log('tie');
+        console.log('Tie!');
     }
     //if choice is rock vs scissor, rock wins, increments winner
     else if((humanChoice=='rock' && computerChoice==='scissor')|| (humanChoice=='scissor' && computerChoice=='rock' )){
@@ -59,13 +58,12 @@ function playRound(humanChoice,computerChoice){
     }
 }
 
-function playGame(playGame,humanScore,computerScore){
+function playGame(){
     for(i=0;i<5;i++){
-        playRound();
+        const humanSelection=getHumanChoice();
+        const computerSelection=getComputerChoice();
+        playRound(humanSelection,computerSelection);
     }
 }
 
-const humanSelection=getHumanChoice();
-const computerSelection=getComputerChoice();
-
-playGame(humanSelection,computerSelection);
+playGame();
